@@ -1,0 +1,7 @@
+
+- A companies profit: double
+- A person's weight: float
+- Average rainfall in September: float
+- Number of runs scored by a cricketer: short
+- Telephone number including area code: String
+- A dress size: byte
