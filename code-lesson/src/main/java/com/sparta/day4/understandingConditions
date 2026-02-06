@@ -1,0 +1,10 @@
+a = 5;
+b = 4;
+c = 3;
+
+a) a < b: false
+b) a != b : true
+c) (a > b) && (a < c): true && false : false
+d) (a > b) || (a < c): true || false : true
+e) a - 1 == b: true
+f) !(b > c): !true: false
