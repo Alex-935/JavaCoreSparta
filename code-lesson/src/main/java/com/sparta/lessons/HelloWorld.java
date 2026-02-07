@@ -22,13 +22,25 @@ public class HelloWorld {
 
     /*
     More Shortcuts:
+
+        - Put .sout after something and tab to turn it into a sout statement
+        - Press shift + alt and click to get multiple cursors for writing text
+        - hold shift while pressing the arrow key to highlight
+
+        - implement unimplemented method: alt + enter
+
         - ctrl + e: recent files
         - alt + home: Navigation bar
+        - alt + insert: create file in navigator (numlock need to be on)
+
         - ctrl + n: class
         - ctrl + shift + n: file
 
         - ctrl + b: takes you to the documentation of the highlighted thing e.g. method
         - shift + f6: rename variables
+
+        Turn something into a method:
+            - highlight and ctrl + alt + m
      */
 
 

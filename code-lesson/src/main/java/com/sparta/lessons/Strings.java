@@ -42,6 +42,5 @@ public class Strings {
         // this prevents making lots of small strings along the way as,
         // the final string is built once
         System.out.println(result.toString());
-
     }
 }

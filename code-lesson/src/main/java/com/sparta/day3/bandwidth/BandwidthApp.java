@@ -39,5 +39,7 @@ public class BandwidthApp {
         // network capacity - new usage requirements
         int newBandwidthAvailability = networkCapacity - newUsageRequirements;
         System.out.println("The new bandwidth available after the new application is installed is: " + newBandwidthAvailability);
+        System.out.println("The new bandwidth available in Mbs is: " + newBandwidthAvailability/1000000);
+
     }
 }
