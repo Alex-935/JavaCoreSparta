@@ -109,7 +109,7 @@ public class Warrior extends UnclassedCharacter implements AdvancedClass {
     @Override
     public boolean isPossibleToMeetStatRequirements() {
 
-        System.out.printf("Surplus: %s   Deficit: %s", this.currentSurplus, this.currentDeficit);
+        //System.out.printf("Surplus: %s   Deficit: %s", this.currentSurplus, this.currentDeficit);
         // as two surplus points are needed for a deficit
         return this.currentSurplus+(this.currentDeficit * 2) >= 0;
     }

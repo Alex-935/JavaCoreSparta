@@ -1,10 +1,19 @@
 Which of the following are deterministic or not:
 
+
+In a deterministic algorithm, for a given particular input,
+the computer will always produce the same output going through
+the same states.
+
+In the case of the non-deterministic algorithm, for the same input,
+the compiler may produce different output in different runs.
+
+
 a) writing Christmas cards to family:
-b) washing up:
-c) reading a book:
-d) waiting for someone to answer the phone:
-e) counting to 10 in French:
-f) playing a game of 501 in darts:
-g) laying the table for a dinner party:
-h) answering this question:
+b) washing up: non-deterministic
+c) reading a book: deterministic
+d) waiting for someone to answer the phone: non-deterministic
+e) counting to 10 in French: deterministic
+f) playing a game of 501 in darts: non-deterministic
+g) laying the table for a dinner party: could be either
+h) answering this question: should be deterministic but likely non-deterministic depending on how pedantic i'm feeling
