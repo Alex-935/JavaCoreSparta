@@ -30,7 +30,6 @@ public class Thief extends UnclassedCharacter implements AdvancedClass {
     @Override
     public int[] calculateDeficit() {
 
-        int deficitTotal = 0;
         int[] deficit = new int[5];
 
         for (int i = 0; i < requirementsArray.length; i++) {
@@ -38,26 +37,22 @@ public class Thief extends UnclassedCharacter implements AdvancedClass {
             int difference = this.attributesArray[i] - this.requirementsArray[i];
             deficit[i] = (difference < 0) ? difference : 0;
 
-            deficitTotal += this.deficitArray[i];
         }
-        this.currentDeficit = deficitTotal;
         return deficit;
     }
 
     @Override
     public int[] calculateSurplus() {
 
-        int surplusTotal = 0;
         int[] surplus = new int[5];
 
         for (int i = 0; i < this.attributesArray.length; i++) {
 
-            int additionalStats = (this.attributesArray[i] - this.requirementsArray[i]) -3;
+            // if the stat total doesn't exceed the requirement, make sure the stat doesn't go below 3
+            int additionalStats = (this.attributesArray[i] > this.requirementsArray[i]) ? (this.attributesArray[i] - this.requirementsArray[i]) : (this.attributesArray[i] - this.requirementsArray[i]) -3;
             surplus[i] = (additionalStats > 0) ? additionalStats : 0;
 
-            surplusTotal += (this.surplusArray[i] % 2 == 0) ? this.surplusArray[i] : this.surplusArray[i]-1;
         }
-        this.currentSurplus = surplusTotal;
         return surplus;
     }
 
@@ -113,6 +108,6 @@ public class Thief extends UnclassedCharacter implements AdvancedClass {
     public boolean isPossibleToMeetStatRequirements() {
 
         // as two surplus points are needed for a deficit
-        return this.currentSurplus+(this.currentDeficit * 2) > 0;
+        return this.currentSurplus+(this.currentDeficit * 2) >= 0;
     }
 }

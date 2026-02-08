@@ -9,7 +9,7 @@ public class CharacterGeneratorApp {
         // initialise characters stats and choose advanced class
         UnclassedCharacter playerCharacter = new UnclassedCharacter();
         //playerCharacter.printInitialGreeting();
-        playerCharacter.chosenAdvancedClass =  playerCharacter.chooseClass(scanner);
+        playerCharacter.chosenAdvancedClass = playerCharacter.chooseClass(scanner);
 
         // initialise advancedClass
         playerCharacter = switch (playerCharacter.chosenAdvancedClass) {
@@ -23,19 +23,40 @@ public class CharacterGeneratorApp {
         System.out.println("You will need to make sure you meet the minimum class requirements, this is how your current attributes compare:");
         playerCharacter.fullAttributeTable();
 
+        playerCharacter.updateDeficitAndSurplus();
         if (!playerCharacter.isPossibleToMeetStatRequirements()) {
             System.out.println("Sorry, there is no way for you to meet the stat requirements");
             System.out.println("You will have to start the program over!");
         }
+        else {
 
-        /*
-        while (!playerCharacter.isRequirementsMet()) {
+            while (!playerCharacter.isRequirementsMet()) {
 
-            // user update stats
+                // user update stats
+                int attrToLower = playerCharacter.selectStatToLower(scanner);
+                int lowerBy = playerCharacter.lowerStat(scanner, attrToLower);
+                playerCharacter.fullAttributeTable();
+                int attrToRaise = playerCharacter.selectStatToRaise(scanner);
+                playerCharacter.updateAttributes(attrToRaise, attrToLower, lowerBy);
 
-            // update surplus and deficit
-            playerCharacter.updateDeficitAndSurplus();
-        }*/
+                // update surplus and deficit
+                playerCharacter.updateDeficitAndSurplus();
+
+                //print out stats again
+                System.out.println("Your attributes are now:");
+                playerCharacter.fullAttributeTable();
+
+                if (playerCharacter.currentDeficit > 0) {
+                    System.out.println("Your still need to update attributes to meet the requirements!");
+                }
+
+                if (!playerCharacter.isPossibleToMeetStatRequirements()) {
+                    System.out.println("Sorry, there is now no way for you to meet the stat requirements");
+                    System.out.println("You will have to start the program over!");
+                }
+            }
+
+            System.out.println("Congratulations, you are now a " + playerCharacter.className);
+        }
     }
-
 }
