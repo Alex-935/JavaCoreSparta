@@ -2,7 +2,7 @@ package com.sparta.lessons;
 
 import java.util.Objects;
 
-public class Customer {
+public class Customer implements Comparable<Customer>{
 
     private String firstName = "";
     private String lastName = "";
@@ -50,5 +50,16 @@ public class Customer {
         // arguments are a comma-separated list of the values to be used
         // as the basis of the hash
         return Objects.hash(firstName, lastName);
+    }
+
+
+    @Override
+    public int compareTo(Customer o) {
+        int lastNameComparison = lastName.compareTo(o.getLastName());
+        if (lastNameComparison == 0) {
+            return firstName.compareTo(o.getFirstName());
+        } else {
+            return lastNameComparison;
+        }
     }
 }
