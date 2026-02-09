@@ -52,6 +52,15 @@ public class Customer implements Comparable<Customer>{
         return Objects.hash(firstName, lastName);
     }
 
+    /*
+    int lastNameComparison = person1.getLastName().compareTo(person2.getLastName());
+        if (lastNameComparison == 0) {
+        return person1.getFirstName().compareTo(person2.getFirstName());
+    } else {
+        return lastNameComparison;
+    }
+        */
+
 
     @Override
     public int compareTo(Customer o) {

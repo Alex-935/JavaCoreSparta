@@ -120,6 +120,8 @@ public class App {
         cust3.setLastName("Sparrow");
         List<Customer> customers = new ArrayList<>(List.of(cust1, cust2, cust3));
 
+        Collections.sort(customers, new SortPersonByLastName());
+
         // we need to have Customer implements Comparable and override compareTo
         Collections.sort(customers);
         for (Customer cust : customers) {
