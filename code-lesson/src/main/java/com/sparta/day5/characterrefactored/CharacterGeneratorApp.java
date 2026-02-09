@@ -8,7 +8,7 @@ public class CharacterGeneratorApp {
 
         // initialise characters stats and choose advanced class
         UnclassedCharacter playerCharacter = new UnclassedCharacter();
-        //playerCharacter.printInitialGreeting();
+        playerCharacter.printInitialGreeting();
         playerCharacter.chosenAdvancedClass = playerCharacter.chooseClass(scanner);
 
         // initialise advancedClass

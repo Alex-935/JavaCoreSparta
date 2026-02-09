@@ -14,8 +14,9 @@ public class Warrior extends UnclassedCharacter implements AdvancedClass {
     }
 
     @Override
-    public void setRequirements() {
-        this.requirementsArray = new int[] {15, 0, 0, 12, 10};
+    public void setRequirements() { this.requirementsArray = new int[] {15, 3, 3, 12, 10};
+    //public void setRequirements() {this.requirementsArray = new int[] {15, 0, 0, 12, 10};
+
     }
 
 }
