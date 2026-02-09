@@ -1,4 +1,4 @@
-package com.sparta.day6.animal.account;
+package com.sparta.day6.account;
 
 public class AccountApp {
 
