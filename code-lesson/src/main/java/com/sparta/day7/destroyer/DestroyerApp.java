@@ -1,4 +1,4 @@
-package com.sparta.day7.shapes.destroyer;
+package com.sparta.day7.destroyer;
 
 import java.util.Random;
 import java.util.Scanner;
