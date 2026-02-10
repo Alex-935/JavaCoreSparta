@@ -41,8 +41,15 @@ public class HelloWorld {
 
         Turn something into a method:
             - highlight and ctrl + alt + m
+
      */
 
+
+    /*
+        Final - can stop a class being extended
+              - stop a method being overriden
+              - stop an attribute from being changed
+     */
 
 
     /*
