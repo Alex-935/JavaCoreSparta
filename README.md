@@ -15,7 +15,7 @@
 ## Day 5 - OOP Adventuerer Class Selector:
 - https://github.com/Alex-935/JavaCoreSparta/tree/main/code-lesson/src/main/java/com/sparta/day5/characterrefactored
 
-##Day 7 - One-Sided Battleship:
+## Day 7 - One-Sided Battleship:
 - https://github.com/Alex-935/JavaCoreSparta/tree/main/code-lesson/src/main/java/com/sparta/day7/destroyer
 
 ## Daily Tasks Official Solutions
