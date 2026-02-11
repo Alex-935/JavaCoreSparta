@@ -3,6 +3,7 @@ package com.sparta.pcw.designpatterns.factorymethod;
 import com.sparta.pcw.designpatterns.factorymethod.beverages.Beverage;
 import com.sparta.pcw.designpatterns.factorymethod.drinkshop.CoffeeFactory;
 import com.sparta.pcw.designpatterns.factorymethod.drinkshop.DrinkMaker;
+import com.sparta.pcw.designpatterns.factorymethod.drinkshop.SodaFactory;
 import com.sparta.pcw.designpatterns.factorymethod.drinkshop.TeaFactory;
 
 public class App {
@@ -11,9 +12,13 @@ public class App {
 
         DrinkMaker teaMaker = new TeaFactory();
         DrinkMaker coffeeMaker = new CoffeeFactory();
+        SodaFactory sodaFactory = new SodaFactory();
 
         var fruitTea = getDrink("Fruit", teaMaker);
         var espresso = getDrink("Espresso", coffeeMaker);
+        var flatWhite = getDrink("FlatWhite", coffeeMaker);
+        var coke = getDrink("Coke", sodaFactory);
+        var fanta = getDrink("Fanta", sodaFactory);
     }
 
     private static Beverage getDrink(String drinkType, DrinkMaker drinkFactory) {
