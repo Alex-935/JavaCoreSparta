@@ -27,7 +27,7 @@ public class DestroyerApp {
 
         // set destroyer location
         this.destroyerCoOrdinates = generateDestroyerLocation();
-        System.out.printf("co-ord 1: (%d, %d),  Co-ord 2: (%d, %d)%n", this.destroyerCoOrdinates[0], this.destroyerCoOrdinates[1], this.destroyerCoOrdinates[2], this.destroyerCoOrdinates[3]);
+        //System.out.printf("co-ord 1: (%d, %d),  Co-ord 2: (%d, %d)%n", this.destroyerCoOrdinates[0], this.destroyerCoOrdinates[1], this.destroyerCoOrdinates[2], this.destroyerCoOrdinates[3]);
 
         // main gameLoop
         gameLoop(scanner);

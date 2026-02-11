@@ -2,6 +2,9 @@ package com.sparta.lessons;
 
 public class HelloWorld {
 
+    // refactoring: https://refactoring.guru/refactoring/smells
+
+
     public static void main(String[] args) {
         System.out.println("Hello World");
 
